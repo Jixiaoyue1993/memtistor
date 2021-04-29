@@ -1,0 +1,5 @@
+* source IJBCMEM
+V_V3         N14364 0  
++PULSE 0v -6v 0s 1ms 1ms 100ms 200ms
+X_U1         N14364 0 RM PARAMS:  RON=100 ROFF=16K RINIT=11K D=10E-9 UV=10E-15
++  P=10

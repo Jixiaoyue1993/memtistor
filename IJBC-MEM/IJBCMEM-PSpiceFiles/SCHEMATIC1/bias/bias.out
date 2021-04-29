@@ -1,0 +1,49 @@
+
+**** 03/12/21 20:04:20 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias"  [ c:\users\jixia\desktop\mem-model\ijbc-mem\ijbcmem-pspicefiles\schematic1\bias.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "bias.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+.INC "c:\users\jixia\desktop\mem-model\ijbc-mem\ijbcmem-pspicefiles\schematic1\bias\bias_profile.inc" 
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+
+**** INCLUDING bias_profile.inc ****
+.LIB    ".\ijbcmem.lib" 
+
+**** RESUMING bias.cir ****
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 1S 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source IJBCMEM
+V_V3         N14364 0  
++PULSE 0v -6v 0s 1ms 1ms 100ms 200ms
+X_U1         N14364 0 RM PARAMS:  RON=100 ROFF=16K RINIT=11K D=10E-9 UV=10E-15
++  P=10
+
+**** RESUMING bias.cir ****
+.END
+
+ERROR(ORPSIM-15108): Subcircuit RM used by X_U1 is undefined
+

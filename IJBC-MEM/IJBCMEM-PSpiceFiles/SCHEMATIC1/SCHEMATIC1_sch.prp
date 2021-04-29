@@ -1,0 +1,86 @@
+("FILE_TYPE"	"PMAP File"
+    ("devices"
+        ("VPULSE")
+        ("RM")
+    )
+    ("instances"
+        ("V3"
+            ("device_name"	"VPULSE")
+            ("pspice_path"	"V_V3")
+            ("level"	"0")
+            ("model_params"
+                ("BiasValue Power"
+                    ("value"	"0W")
+                    ("pspice_param"	"BiasValue Power")
+                )
+                ("V2"
+                    ("value"	"-6v")
+                    ("pspice_param"	"V2")
+                )
+                ("TD"
+                    ("value"	"0s")
+                    ("pspice_param"	"TD")
+                )
+                ("TR"
+                    ("value"	"1ms")
+                    ("pspice_param"	"TR")
+                )
+                ("PER"
+                    ("value"	"200ms")
+                    ("pspice_param"	"PER")
+                )
+                ("PW"
+                    ("value"	"100ms")
+                    ("pspice_param"	"PW")
+                )
+                ("TF"
+                    ("value"	"1ms")
+                    ("pspice_param"	"TF")
+                )
+                ("V1"
+                    ("value"	"0v")
+                    ("pspice_param"	"V1")
+                )
+                ("AC"
+                    ("value"	"")
+                    ("pspice_param"	"AC")
+                )
+                ("DC"
+                    ("value"	"")
+                    ("pspice_param"	"DC")
+                )
+            )
+        )
+        ("U1"
+            ("device_name"	"RM")
+            ("pspice_path"	"X_U1")
+            ("level"	"0")
+            ("model_params"
+                ("RON"
+                    ("value"	"100")
+                    ("pspice_param"	"RON")
+                )
+                ("ROFF"
+                    ("value"	"16K")
+                    ("pspice_param"	"ROFF")
+                )
+                ("RINIT"
+                    ("value"	"11K")
+                    ("pspice_param"	"RINIT")
+                )
+                ("D"
+                    ("value"	"10E-9")
+                    ("pspice_param"	"D")
+                )
+                ("UV"
+                    ("value"	"10E-15")
+                    ("pspice_param"	"UV")
+                )
+                ("P"
+                    ("value"	"10")
+                    ("pspice_param"	"P")
+                )
+            )
+        )
+    )
+)

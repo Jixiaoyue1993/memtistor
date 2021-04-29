@@ -1,0 +1,18 @@
+.SUBCKT IJBCMEM Plus Minus PARAMS:
++kL=-6 AlphaL=2  aL=-1 wL=2 a1=0.22 b1=-0.38 c1=0.166 d1=9.96E-05
++kH=3E-3 AlphaH=4 aH=-1 wH=1 a2=0.22 b2=-10 c2=8.15 d2=3E-08
+**********differential equation mode*********
+Gx 0 x value={F(V(x),V(Plus,Minus),aL,aH,wL,wH,kL,kH,AlphaL,AlphaH)}
+Cx x 0 1 IC={0}
+Raux x 0 1T
+************Ohms law***********************
+Gm Plus Minus value={IVRel(V(x),V(Plus,Minus),a1,a2,b1,b2,c1,c2,d1,d2)}
+************functions*****************
+.func f1(x,v,kL,AlphaL,aL,wL)={kL*v^AlphaL*exp(-exp(aL*x+wL))}
+.func f2(x,v,kH,AlphaH,aH,wH)={kH*v^AlphaH*exp(-exp(aH*x+wH))}
+.func f3(x,v,a1,b1,c1,d1)={a1*x*exp(b1*x^3+c1)*sinh(d1*(v)^3)}
+.func f4(x,v,a2,b2,c2,d2)={a2*x*exp(b2*x^3+c2)*sinh(d2*(v)^3)}
+.func F(x,v,aL,aH,wL,wH,kL,kH,AlphaL,AlphaH)={if(v<-1,f1(x,v,kL,AlphaL,aL,wL),if(v>1,f2(x,v,kH,AlphaH,aH,wH),0))}
+.func IVRel(x,v,a1,a2,b1,b2,c1,c2,d1,d2)={if(v<-1,f3(x,v,a1,b1,c1,d1),if(v>1,f4(x,v,a2,b2,c2,d2),0))}
+.ENDS IJBCMEM
+

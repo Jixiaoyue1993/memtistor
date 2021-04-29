@@ -1,0 +1,8 @@
+STATUS: PSpice Schematics to Capture translator (17.2.0.d001)
+STATUS:  
+STATUS: Translator started at Tuesday, January 26, 2021 13:29:28
+STATUS: c:\cadence\spb_17.2\tools\bin\sch2cap -f "C:\Users\jixia\Desktop\mem-model\IJBC-MEM\IJBCMEM.lib" -o "C:\Users\jixia\Desktop\mem-model\IJBC-MEM\IJBCMEM.olb" -i C:\SPB_Data\cdssetup\OrCAD_PSpice/17.2.0/PSpice.ini
+INFO(ORSCH-1029): Using existing library 'c:\cadence\spb_17.2\tools\Capture\Library\PSpice\modeled.etc'.
+INFO(ORSCH-1029): Using existing library 'C:\Users\jixia\Desktop\mem-model\IJBC-MEM\IJBCMEM.olb'.
+STATUS: Translator stopped at Tuesday, January 26, 2021 13:29:28
+STATUS: 0 Error messages, 0 Warning messages
